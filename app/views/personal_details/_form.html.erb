@@ -1,0 +1,128 @@
+<%= form_with(model: personal_detail, local: true) do |form| %>
+  <% if personal_detail.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(personal_detail.errors.count, "error") %> prohibited this personal_detail from being saved:</h2>
+
+      <ul>
+      <% personal_detail.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<table class="table">
+  <tr>
+  <div class="field">
+
+    <td><%= form.label :staff_image, "Staff Image" %></td>
+    <td>
+      <div class="custom-file mb-3">
+      <%= form.file_field :staff_image, class:'custom-file-input', id:'customFile' %>
+    <label class="custom-file-label" for="customFile">Choose file</label>
+</div>
+  </td>
+  </div>
+</tr><tr>
+  <div class="field">
+    <td><%= form.label :staff_name, "Staff Full Name"  %></td>
+    <td><%= form.text_field :staff_name, class:'text_box' %></td>
+  </div>
+</tr><tr>
+  <div class="field">
+    <td><%= form.label :staff_nric, "Staff NRIC"  %></td>
+    <td><%= form.number_field :staff_nric, class:'text_box'%></td>
+  </div>
+</tr><tr>
+  <div class="field">
+    <td><%= form.label :staff_dob, "Staff Date of Birth"  %></td>
+    <td><%= form.date_select :staff_dob, :start_year => 1900 %></td>
+  </div>
+</tr><tr>
+  <div class="field">
+    <td><%= form.label :staff_sex, "Staff Gender"  %></td>
+    <td><%= form.select(:staff_sex, options_for_select([['Please select your gender',''],['Male','Male'],['Female','Female']])) %></td>
+</tr><tr>
+  <div class="field">
+    <td><%= form.label :staff_pob, "Staff Place of Birth"  %></td>
+    <td><%= form.text_field :staff_pob, class:'text_box' %></td>
+  </div>
+</tr><tr>
+  <div class="field">
+    <td><%= form.label :staff_race, "Staff Race"  %></td>
+    <td><%= form.text_field :staff_race, class:'text_box' %></td>
+  </div>
+</tr><tr>
+  <div class="field">
+    <td><%= form.label :staff_religion, "Staff Religion"   %></td>
+    <td><%= form.text_field :staff_religion, class:'text_box' %></td>
+  </div>
+</tr><tr>
+  <div class="field">
+    <td><%= form.label :staff_marital_status, "Staff Marital Status"   %></td>
+    <td><%= form.text_field :staff_marital_status, class:'text_box' %></td>
+  </div>
+</tr><tr>
+  <div class="field">
+    <td><%= form.label :staff_perm_address, "Staff Permanent Address"   %></td>
+    <td><%= form.text_area :staff_perm_address, class:'text_area_edit' %></td>
+  </div>
+</tr><tr>
+  <div class="field">
+    <td><%= form.label :staff_postcode, "Postcode"   %></td>
+    <td><%= form.number_field :staff_postcode, class:'text_box' %></td>
+  </div>
+</tr><tr>
+  <div class="field">
+    <td><%= form.label :staff_state, "State"   %></td>
+    <td><%= form.select(:staff_state, options_for_select([['Johor','Johor'],['Kedah','Kedah'],['Kelantan','Kelantan'],['Melaka','Melaka'],['Negeri Sembilan','Negeri Sembilan'],['Pahang','Pahang'],['Penang','Penang'],['Perak','Perak'],['Perlis','Perlis'],['Johor','Johor'],['Sabah','Sabah'],['Sarawak','Sarawak'],['Selangor','Selangor'],['Terengganu','Terengganu'],['Wilayah Persekutuan','Wilayah Persekutuan']])) %></td>
+  </div>
+</tr><tr>
+  <div class="field">
+    <td><%= form.label :staff_tel_no, "Staff Telephone No."   %></td>
+    <td><%= form.text_field :staff_tel_no, class:'text_box' %></td>
+  </div>
+</tr><tr>
+  <div class="field">
+    <td><%= form.label :staff_hp_no, "Staff HP No."   %></td>
+    <td><%= form.text_field :staff_hp_no, class:'text_box' %></td>
+  </div>
+</tr><tr>
+  <div class="field">
+    <td><%= form.label :staff_corr_address, "Staff Correspondance Address"   %></td>
+    <td><%= form.text_area :staff_corr_address, class:'text_area_edit' %></td>
+  </div>
+</tr><tr>
+  <div class="field">
+    <td><%= form.label :staff_employ_type, "Staff Employment Type"   %></td>
+    <td><%= form.select(:staff_employ_type, options_for_select([['Please select your type',''],['Permanent','Permanent'],['Contract','Contract'],['Internship','Internship']])) %></td>
+  </div>
+</table>
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+
+<style>
+  .text_box{
+    width: 500px;
+    -moz-appearance:textfield;
+  }
+  .text_area_edit{
+    width: 400px;
+    height: 100px;
+  }
+
+.text_box::-webkit-outer-spin-button,
+.text_box::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+</style>
+
+<script>
+// Add the following code if you want the name of the file appear on select
+$(".custom-file-input").on("change", function() {
+  var fileName = $(this).val().split("\\").pop();
+  $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+});
+</script>

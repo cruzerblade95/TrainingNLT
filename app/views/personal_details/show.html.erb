@@ -1,0 +1,122 @@
+<%= render "layouts/menubar"%>
+<div class="container">
+<p id="notice"><%= notice %></p>
+<h1><b>Staff Profile</b></h1>
+<br/>
+<br/>
+<table class="table">
+  <tr><td>
+<p>
+  <strong>Staff Image:</strong><br/>
+  </td><td>
+  <%= image_tag(@personal_detail.staff_image, :size => "225x180", class:'image') %>
+</p>
+</td></tr>
+<tr><td>
+<p>
+  <strong>Staff Name:</strong>
+  </td><td>
+  <%= @personal_detail.staff_name %>
+</p>
+</td></tr>
+<tr><td>
+<p>
+  <strong>Staff NRIC:</strong>
+  </td><td>
+  <%= @personal_detail.staff_nric %>
+</p>
+</td></tr>
+<tr><td>
+<p>
+  <strong>Staff Date of Birth:</strong></td><td>
+  <%= @personal_detail.staff_dob %>
+</p>
+</td></tr>
+<tr><td>
+<p>
+  <strong>Staff Gender:</strong></td><td>
+  <%= @personal_detail.staff_sex %>
+</p>
+</td></tr>
+<tr><td>
+<p>
+  <strong>Staff Place of Birth:</strong></td><td>
+  <%= @personal_detail.staff_pob %>
+</p>
+</td></tr>
+<tr><td>
+<p>
+  <strong>Staff Race:</strong></td><td>
+  <%= @personal_detail.staff_race %>
+</p>
+</td></tr>
+<tr><td>
+<p>
+  <strong>Staff Religion:</strong></td><td>
+  <%= @personal_detail.staff_religion %>
+</p>
+</td></tr>
+<tr><td>
+<p>
+  <strong>Staff Marital Status:</strong></td><td>
+  <%= @personal_detail.staff_marital_status %>
+</p>
+</td></tr>
+<tr><td>
+<p>
+  <strong>Permanant Address:</strong></td><td>
+  <%= @personal_detail.staff_perm_address %>
+</p>
+</td></tr>
+<tr><td>
+<p>
+  <strong>Postcode:</strong></td><td>
+  <%= @personal_detail.staff_postcode %>
+</p>
+</td></tr>
+<tr><td>
+<p>
+  <strong>State:</strong></td><td>
+  <%= @personal_detail.staff_state %>
+</p>
+</td></tr>
+<tr><td>
+<p>
+  <strong>Telephone No.:</strong></td><td>
+  <%= @personal_detail.staff_tel_no %>
+</p>
+</td></tr>
+<tr><td>
+<p>
+  <strong>HP No.:</strong></td><td>
+  <%= @personal_detail.staff_hp_no %>
+</p>
+</td></tr>
+<tr><td>
+<p>
+  <strong>Correspondance Address:</strong></td><td>
+  <%= @personal_detail.staff_corr_address %>
+</p>
+</td></tr>
+<tr><td>
+<p>
+  <strong>Employment Type:</strong></td><td>
+  <%= @personal_detail.staff_employ_type %>
+</p>
+</td></tr>
+</table>
+<br/>
+<%= link_to 'Edit', edit_personal_detail_path(@personal_detail) %> |
+<%= link_to 'Back', personal_details_path %>
+<br/>
+<br/>
+<%= render "layouts/footer"%>
+
+<style>
+.container-background{
+  height: 350px;
+}
+.image{
+  border-radius: 50%;
+}
+</style>

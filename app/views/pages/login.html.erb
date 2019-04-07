@@ -1,0 +1,65 @@
+
+    <section class="login-block">
+        <div class="container">
+    	<div class="row">
+    		<div class="col-md-4 login-sec">
+          <center><img src="http://nltinternational.com/wp-content/uploads/2017/07/nlt-logo-title-new.png" alt=""></center>
+          <br/>
+            <h2 class="text-center">Welcome to Training Management System</h2>
+    		    <form class="login-form">
+        <div class="form-check">
+          <%= link_to 'New Staff Sign up', staff_register_path, :class=>"btn btn-login float"%>
+          <%= link_to 'Sign in', new_user_session_path, :class=>"btn btn-login float-right"%>
+      </div>
+
+    </form>
+    		</div>
+    		<div class="col-md-8 banner-sec">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                     <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                      </ol>
+                <div class="carousel-inner" role="listbox">
+        <div class="carousel-item active">
+          <img class="d-block img-fluid" src="https://lh3.googleusercontent.com/dAO2O9osd-ojcvuxhKz2mlZp4CRjnw91Qo5wkmxYvydm7EB7dMDmVE9l8D6WAE-7WuKNDcn7n0sTjSr4F4sI-TP4X8BZmYFlDwnXUllbAp4j78usuXgOPYTZpb8_JWIvVbveX8vWlWiw-l_aaS0IZ5ytA07swYuRoUDQoklIIleJXbgyIrUbqbD9f789D26KeOox9kX2ITlUr3X04WZGS9o92aWkakzKgxL7uaPGmgGvcySmCteqqRbyTFh4vkpxaSMGryIuyP7CmCvfxrbFjfTwA7kLZPLalG3Vh0_6oXoTBnA2U1fgRZMwK1zQ18JgNr0xJqjfuu10xI2wHhRZZKb7wjQHFl7d-NbwZqkFxPkOe1Ul5qO-MgdHoFWLcbC7_kJMHfALhvYVN8ddcHTMsog7CcBaxu8NawFlmMNqtjPU9EdN_VdMpECmACnLmM4k3ae0_WHSm8xzArP5MVlbgU4wn6tQ_iVfLU4Aj5jR_vO9TPiJsqNLU7ptVwS8mUZlWKIXGLNwJgRlpFPbnlbzetAz6nThsr-fBygnj7OFjN2ebgYsZcQXxidgYG4BVb-wLyZ8eGa1pQpD8WGsfLvf5voo6x2XSL-NE95mukXS2uEjuid_PWVhfC5yY14jY-18WWfyW8Mi14pv-CVcNfYYDA9CCPEUuV0yatSYC7Tf7wHj03EhHQ83r6AK2gtjKpi4zZLS3jP0RRBXqWUGjGTT44xN=w965-h639-no" alt="First slide">
+          <div class="carousel-caption d-none d-md-block">
+            <div class="banner-text">
+                
+            </div>
+      </div>
+        </div>
+                </div>
+
+    		</div>
+    	</div>
+    </div>
+    </section>
+
+    <style>
+      @import url("//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css");
+      .login-block{
+          background: #DE6262;  /* fallback for old browsers */
+      background: -webkit-linear-gradient(to bottom, #FFB88C, #DE6262);  /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to bottom, #FFB88C, #DE6262); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      float:left;
+      width:100%;
+      padding : 50px 0;
+      }
+      .banner-sec{background:url(https://static.pexels.com/photos/33972/pexels-photo.jpg)  no-repeat left bottom; background-size:cover; min-height:500px; border-radius: 0 10px 10px 0; padding:0;}
+      .container{background:#fff; border-radius: 10px; box-shadow:15px 20px 0px rgba(0,0,0,0.1);}
+      .carousel-inner{border-radius:0 10px 10px 0;}
+      .carousel-caption{text-align:left; left:5%;}
+      .login-sec{padding: 50px 30px; position:relative;}
+      .login-sec .copy-text{position:absolute; width:80%; bottom:20px; font-size:13px; text-align:center;}
+      .login-sec .copy-text i{color:#FEB58A;}
+      .login-sec .copy-text a{color:#E36262;}
+      .login-sec h2{margin-bottom:30px; font-weight:800; font-size:30px; color: #DE6262;}
+      .login-sec h2:after{content:" "; width:100px; height:5px; background:#FEB58A; display:block; margin-top:20px; border-radius:3px; margin-left:auto;margin-right:auto}
+      .btn-login{background: #DE6262; color:#fff; font-weight:600;}
+      .banner-text{width:70%; position:absolute; bottom:40px; padding-left:20px;}
+      .banner-text h2{color:#fff; font-weight:600;}
+      .banner-text h2:after{content:" "; width:100px; height:5px; background:#FFF; display:block; margin-top:20px; border-radius:3px;}
+      .banner-text p{color:#fff;}
+      .col-md-4{background-color: #e3e3e3;background:url(http://nltinternational.com/wp-content/uploads/2016/08/header.jpg);}
+      </style>

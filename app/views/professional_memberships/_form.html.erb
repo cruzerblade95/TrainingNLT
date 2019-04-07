@@ -1,0 +1,42 @@
+<%= form_with(model: professional_membership, local: true) do |form| %>
+  <% if professional_membership.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(professional_membership.errors.count, "error") %> prohibited this professional_membership from being saved:</h2>
+
+      <ul>
+      <% professional_membership.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :association %>
+    <%= form.text_field :association %>
+  </div>
+
+  <div class="field">
+    <%= form.label :institution %>
+    <%= form.text_field :institution %>
+  </div>
+
+  <div class="field">
+    <%= form.label :duration_date %>
+    <%= form.text_field :duration_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :annual_subs %>
+    <%= form.text_field :annual_subs %>
+  </div>
+
+  <div class="field">
+    <%= form.label :personal_detail_id %>
+    <%= form.text_field :personal_detail_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

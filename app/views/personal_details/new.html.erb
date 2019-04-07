@@ -1,0 +1,33 @@
+<%= render "layouts/menubar"%>
+
+<div class="container">
+  <ul class="breadcrumb">
+    <li class="breadcrumb-item active">Personal Detail</li>
+    <li class="breadcrumb-item"><a href="#">Legal Spouse</a></li>
+    <li class="breadcrumb-item"><a href="#">Children</a></li>
+    <li class="breadcrumb-item"><a href="#">Relative</a></li>
+    <li class="breadcrumb-item"><a href="#">Qualification</a></li>
+    <li class="breadcrumb-item"><a href="#">Experience</a></li>
+    <li class="breadcrumb-item"><a href="#">Honor and Award</a></li>
+    <li class="breadcrumb-item"><a href="#">Training</a></li>
+  </ul>
+  <h2>Progress</h2>
+  <div class="progress">
+    <div class="progress-bar progress-bar-striped progress-bar-animated" style="width:0%"></div>
+  </div>
+
+<h1>New Personal Detail</h1>
+
+<%= render 'form', personal_detail: @personal_detail %>
+
+<%= link_to 'Back', personal_details_path %>
+<br/>
+<br/>
+</div>
+<%= render "layouts/footer"%>
+
+<style>
+.container-background{
+  height: 350px;
+}
+</style>

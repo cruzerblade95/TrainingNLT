@@ -1,0 +1,37 @@
+<%= form_with(model: honors_and_award, local: true) do |form| %>
+  <% if honors_and_award.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(honors_and_award.errors.count, "error") %> prohibited this honors_and_award from being saved:</h2>
+
+      <ul>
+      <% honors_and_award.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :honor_or_award %>
+    <%= form.text_field :honor_or_award %>
+  </div>
+
+  <div class="field">
+    <%= form.label :grantor %>
+    <%= form.text_field :grantor %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date_received %>
+    <%= form.date_select :date_received %>
+  </div>
+
+  <div class="field">
+    <%= form.label :personal_detail_id %>
+    <%= form.text_field :personal_detail_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

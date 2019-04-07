@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Ben name:</strong>
+  <%= @beneficiary.ben_name %>
+</p>
+
+<p>
+  <strong>Ben nric:</strong>
+  <%= @beneficiary.ben_nric %>
+</p>
+
+<p>
+  <strong>Ben relationship:</strong>
+  <%= @beneficiary.ben_relationship %>
+</p>
+
+<p>
+  <strong>Ben percentage:</strong>
+  <%= @beneficiary.ben_percentage %>
+</p>
+
+<p>
+  <strong>Ben tel no:</strong>
+  <%= @beneficiary.ben_tel_no %>
+</p>
+
+<p>
+  <strong>Ben hp no:</strong>
+  <%= @beneficiary.ben_hp_no %>
+</p>
+
+<p>
+  <strong>Ben perm address:</strong>
+  <%= @beneficiary.ben_perm_address %>
+</p>
+
+<p>
+  <strong>Ben postcode:</strong>
+  <%= @beneficiary.ben_postcode %>
+</p>
+
+<%= link_to 'Edit', edit_beneficiary_path(@beneficiary) %> |
+<%= link_to 'Back', beneficiaries_path %>

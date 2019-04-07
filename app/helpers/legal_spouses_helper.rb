@@ -1,0 +1,2 @@
+module LegalSpousesHelper
+end

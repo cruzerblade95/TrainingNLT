@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Honor or award:</strong>
+  <%= @honors_and_award.honor_or_award %>
+</p>
+
+<p>
+  <strong>Grantor:</strong>
+  <%= @honors_and_award.grantor %>
+</p>
+
+<p>
+  <strong>Date received:</strong>
+  <%= @honors_and_award.date_received %>
+</p>
+
+<p>
+  <strong>Personal detail:</strong>
+  <%= @honors_and_award.personal_detail %>
+</p>
+
+<%= link_to 'Edit', edit_honors_and_award_path(@honors_and_award) %> |
+<%= link_to 'Back', honors_and_awards_path %>

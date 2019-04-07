@@ -1,0 +1,27 @@
+<%= render "layouts/menubar"%>
+<div class="container">
+  <ul class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#">Personal Detail</a></li>
+    <li class="breadcrumb-item"><a href="#">Legal Spouse</a></li>
+    <li class="breadcrumb-item"><a href="#">Children</a></li>
+    <li class="breadcrumb-item"><a href="#">Relative</a></li>
+    <li class="breadcrumb-item"><a href="#">Payroll</a></li>
+    <li class="breadcrumb-item active">Bank Account</li>
+  </ul>
+  <h2>Progress</h2>
+  <div class="progress">
+    <div class="progress-bar progress-bar-striped progress-bar-animated" style="width:60%">60%</div>
+  </div>
+<h1>New Bank Account</h1>
+
+<%= render 'form', bank_account: @bank_account %>
+
+<%= link_to 'Back', bank_accounts_path %>
+</div>
+<%= render "layouts/footer"%>
+
+<style>
+.container{
+  height: 350px;
+}
+</style>

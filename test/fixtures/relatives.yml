@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  relative_name: MyString
+  relative_nric: 1
+  relative_relationship: MyString
+  relative_tel_no: MyString
+  relative_hp_no: MyString
+  relative_perm_address: MyText
+  relative_postcode: 1
+  personal_detail: one
+
+two:
+  relative_name: MyString
+  relative_nric: 1
+  relative_relationship: MyString
+  relative_tel_no: MyString
+  relative_hp_no: MyString
+  relative_perm_address: MyText
+  relative_postcode: 1
+  personal_detail: two

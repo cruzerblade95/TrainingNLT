@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  qualification: MyString
+  sub_disc: MyString
+  sch_col_uni: MyString
+  year: 2019-03-12
+  duration: MyString
+  personal_detail: one
+
+two:
+  qualification: MyString
+  sub_disc: MyString
+  sch_col_uni: MyString
+  year: 2019-03-12
+  duration: MyString
+  personal_detail: two

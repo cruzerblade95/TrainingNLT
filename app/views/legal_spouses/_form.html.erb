@@ -1,0 +1,77 @@
+<%= form_with(model: legal_spouse, local: true) do |form| %>
+  <% if legal_spouse.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(legal_spouse.errors.count, "error") %> prohibited this legal_spouse from being saved:</h2>
+
+      <ul>
+      <% legal_spouse.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :spouse_name %>
+    <%= form.text_field :spouse_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :spouse_nric %>
+    <%= form.number_field :spouse_nric %>
+  </div>
+
+  <div class="field">
+    <%= form.label :spouse_dob %>
+    <%= form.date_select :spouse_dob %>
+  </div>
+
+  <div class="field">
+    <%= form.label :spouse_age %>
+    <%= form.number_field :spouse_age %>
+  </div>
+
+  <div class="field">
+    <%= form.label :spouse_pob %>
+    <%= form.text_field :spouse_pob %>
+  </div>
+
+  <div class="field">
+    <%= form.label :spouse_race %>
+    <%= form.text_field :spouse_race %>
+  </div>
+
+  <div class="field">
+    <%= form.label :spouse_religion %>
+    <%= form.text_field :spouse_religion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :spouse_tel_no %>
+    <%= form.text_field :spouse_tel_no %>
+  </div>
+
+  <div class="field">
+    <%= form.label :spouse_hp_no %>
+    <%= form.text_field :spouse_hp_no %>
+  </div>
+
+  <div class="field">
+    <%= form.label :spouse_occupation %>
+    <%= form.text_field :spouse_occupation %>
+  </div>
+
+  <div class="field">
+    <%= form.label :spouse_perm_address %>
+    <%= form.text_area :spouse_perm_address %>
+  </div>
+
+  <div class="field">
+    <%= form.label :personal_detail_id %>
+    <%= form.text_field :personal_detail_id, value: @current_user_register %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,37 @@
+<%= form_with(model: payroll, local: true) do |form| %>
+  <% if payroll.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(payroll.errors.count, "error") %> prohibited this payroll from being saved:</h2>
+
+      <ul>
+      <% payroll.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :epf_no %>
+    <%= form.number_field :epf_no %>
+  </div>
+
+  <div class="field">
+    <%= form.label :socso_no %>
+    <%= form.number_field :socso_no %>
+  </div>
+
+  <div class="field">
+    <%= form.label :income_tax_no %>
+    <%= form.number_field :income_tax_no %>
+  </div>
+
+  <div class="field">
+    <%= form.label :personal_detail_id %>
+    <%= form.text_field :personal_detail_id, value: "#{@current_user_register}" %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,102 @@
+<%= render "layouts/menubar"%>
+<div class="container">
+<br/>
+<br/>
+<h1>Training Attendeds</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Training</th>
+      <th>Status</th>
+      <th>Duration training</th>
+      <th>Training institute</th>
+      <th>Training place</th>
+      <th>Staff</th>
+      <th>Download Certificate</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>Ruby on rails training</td>
+      <td>Finished</td>
+      <td>20 hours</td>
+      <td>Bangsar South</td>
+      <td>Kerinchi</td>
+      <td>Nabil</td>
+      <td><a href="#">Download</a></td>
+    </tr>
+
+    <tr>
+      <td>Ruby on rails training</td>
+      <td>Finished</td>
+      <td>40 hours</td>
+      <td>Bangsar South</td>
+      <td>Kerinchi</td>
+      <td>Syakir</td>
+      <td><a href="#">Download</a></td>
+    </tr>
+
+    <tr>
+      <td>Ruby on rails training</td>
+      <td>Finished</td>
+      <td>40 hours</td>
+      <td>Bangsar South</td>
+      <td>Kerinchi</td>
+      <td>Syakir</td>
+      <td><a href="#">Download</a></td>
+    </tr>
+    <% @training_attendeds.each do |training_attended| %>
+      <tr>
+        <td><%= training_attended.training %></td>
+        <td><%= training_attended.status %></td>
+        <td><%= training_attended.duration_training %></td>
+        <td><%= training_attended.training_institute %></td>
+        <td><%= training_attended.training_place %></td>
+        <td><%= training_attended.personal_detail %></td>
+        <td><%= link_to 'Show', training_attended %></td>
+        <td><%= link_to 'Edit', edit_training_attended_path(training_attended) %></td>
+        <td><%= link_to 'Destroy', training_attended, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<br>
+<br>
+<br>
+
+<fieldset>
+  <legend><h2>Staff Training Total Hours</h2></legend>
+
+  <table class="table">
+    <tr>
+      <th>Staff Name</th>
+      <th>Total Hours</th>
+    </tr>
+    <tr>
+      <td>Nabil</td>
+      <td><font color="red">20</font></td>
+    </tr>
+    <tr>
+      <td>Syakir</td>
+      <td><font color="green">80</font></td>
+    </tr>
+  </table>
+<br><br>
+  <div class="alert alert-danger">
+  <strong>Attention!</strong>  total minimum hours for each staff is 72 hours</a>.
+</div>
+</fieldset>
+
+</div>
+<%= render "layouts/footer"%>
+
+<style>
+.container-background{
+  height: 350px;
+}
+</style>

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  children_name: MyString
+  children_nric: 1
+  children_age: 1
+  children_sex: MyString
+  personal_detail: one
+
+two:
+  children_name: MyString
+  children_nric: 1
+  children_age: 1
+  children_sex: MyString
+  personal_detail: two

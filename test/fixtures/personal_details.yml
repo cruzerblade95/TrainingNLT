@@ -1,0 +1,35 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  staff_name: MyString
+  staff_nric: 1
+  staff_dob: 2019-03-11
+  staff_sex: MyString
+  staff_pob: MyString
+  staff_race: MyString
+  staff_religion: MyString
+  staff_marital_status: MyString
+  staff_perm_address: MyText
+  staff_postcode: 1
+  staff_state: MyString
+  staff_tel_no: MyString
+  staff_hp_no: MyString
+  staff_corr_address: MyText
+  staff_employ_type: MyString
+
+two:
+  staff_name: MyString
+  staff_nric: 1
+  staff_dob: 2019-03-11
+  staff_sex: MyString
+  staff_pob: MyString
+  staff_race: MyString
+  staff_religion: MyString
+  staff_marital_status: MyString
+  staff_perm_address: MyText
+  staff_postcode: 1
+  staff_state: MyString
+  staff_tel_no: MyString
+  staff_hp_no: MyString
+  staff_corr_address: MyText
+  staff_employ_type: MyString

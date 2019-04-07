@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  honor_or_award: MyString
+  grantor: MyString
+  date_received: 2019-03-12
+  personal_detail: one
+
+two:
+  honor_or_award: MyString
+  grantor: MyString
+  date_received: 2019-03-12
+  personal_detail: two

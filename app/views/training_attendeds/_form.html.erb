@@ -1,0 +1,89 @@
+<%= form_with(model: training_attended, local: true) do |form| %>
+  <% if training_attended.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(training_attended.errors.count, "error") %> prohibited this training_attended from being saved:</h2>
+
+      <ul>
+      <% training_attended.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<table class="table">
+
+  <div class="field"><tr><td>
+    <%= form.label :training %>
+    </td><td>
+    <%= form.text_field :training, class:'text_box' %></td></tr>
+  </div>
+
+  <div class="field"><tr><td>
+    <%= form.label :status %></td><td>
+    <%= form.text_field :status, class:'text_box' %></td></tr>
+  </div>
+
+  <div class="field"><tr><td>
+    <%= form.label :duration_training, "Duration Training" %></td><td>
+    <%= form.number_field :duration_training, class:'text_box' %></td></tr>
+  </div>
+
+  <div class="field"><tr><td>
+    <%= form.label :training_institute, "Training Institute" %></td><td>
+    <%= form.text_field :training_institute, class:'text_box' %></td></tr>
+  </div>
+
+  <div class="field"><tr><td>
+    <%= form.label :training_place, "Training Place" %></td><td>
+    <%= form.text_field :training_place, class:'text_box' %></td></tr>
+  </div>
+
+  <div class="field"><tr><td>
+    <%= form.label :personal_detail_id, "Staff ID" %></td><td>
+    <%= form.text_field :personal_detail_id %></td></tr>
+  </div>
+
+  <tr>
+  <div class="field">
+
+    <td><%= form.label :staff_image, "Upload Your Certificate" %></td>
+    <td>
+      <div class="custom-file mb-3">
+      <%= form.file_field :staff_image, class:'custom-file-input', id:'customFile' %>
+    <label class="custom-file-label" for="customFile">Choose file</label>
+</div>
+  </td>
+  </div>
+</tr>
+  </table>
+  <br/>
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+
+<style>
+  .text_box{
+    width: 500px;
+    -moz-appearance:textfield;
+  }
+  .text_area_edit{
+    width: 400px;
+    height: 100px;
+  }
+
+.text_box::-webkit-outer-spin-button,
+.text_box::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+</style>
+
+<script>
+// Add the following code if you want the name of the file appear on select
+$(".custom-file-input").on("change", function() {
+  var fileName = $(this).val().split("\\").pop();
+  $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+});
+</script>

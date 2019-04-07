@@ -1,0 +1,47 @@
+<%= form_with(model: working_experience, local: true) do |form| %>
+  <% if working_experience.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(working_experience.errors.count, "error") %> prohibited this working_experience from being saved:</h2>
+
+      <ul>
+      <% working_experience.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :company_name %>
+    <%= form.text_field :company_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :designation %>
+    <%= form.text_field :designation %>
+  </div>
+
+  <div class="field">
+    <%= form.label :reason_leaving %>
+    <%= form.text_area :reason_leaving %>
+  </div>
+
+  <div class="field">
+    <%= form.label :year %>
+    <%= form.date_select :year %>
+  </div>
+
+  <div class="field">
+    <%= form.label :duration %>
+    <%= form.text_field :duration %>
+  </div>
+
+  <div class="field">
+    <%= form.label :personal_detail_id %>
+    <%= form.text_field :personal_detail_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

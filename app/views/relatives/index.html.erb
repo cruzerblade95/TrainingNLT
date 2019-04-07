@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Relatives</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Relative name</th>
+      <th>Relative nric</th>
+      <th>Relative relationship</th>
+      <th>Relative tel no</th>
+      <th>Relative hp no</th>
+      <th>Relative perm address</th>
+      <th>Relative postcode</th>
+      <th>Personal detail</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @relatives.each do |relative| %>
+      <tr>
+        <td><%= relative.relative_name %></td>
+        <td><%= relative.relative_nric %></td>
+        <td><%= relative.relative_relationship %></td>
+        <td><%= relative.relative_tel_no %></td>
+        <td><%= relative.relative_hp_no %></td>
+        <td><%= relative.relative_perm_address %></td>
+        <td><%= relative.relative_postcode %></td>
+        <td><%= relative.personal_detail %></td>
+        <td><%= link_to 'Show', relative %></td>
+        <td><%= link_to 'Edit', edit_relative_path(relative) %></td>
+        <td><%= link_to 'Destroy', relative, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Relative', new_relative_path %>

@@ -1,0 +1,58 @@
+<%= render "layouts/menubar"%>
+<div class="container">
+  <ul class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#">Personal Detail</a></li>
+    <li class="breadcrumb-item active">Legal Spouse</li>
+  </ul>
+  <h2>Progress</h2>
+  <div class="progress">
+    <div class="progress-bar progress-bar-striped progress-bar-animated" style="width:60%">60%</div>
+  </div>
+
+<h1>New Honors And Award</h1>
+<fieldset>
+  <legend>Insert Honor and Award </legend>
+<%= render 'form', honors_and_award: @honors_and_award %>
+</fieldset>
+<br/>
+<br/>
+<fieldset>
+  <legend>Show Honor and Award </legend>
+  <h1>Honors And Awards</h1>
+
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Honor or award</th>
+        <th>Grantor</th>
+        <th>Date received</th>
+        <th>Personal detail</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @honors_and_awards.each do |honors_and_award| %>
+        <tr>
+          <td><%= honors_and_award.honor_or_award %></td>
+          <td><%= honors_and_award.grantor %></td>
+          <td><%= honors_and_award.date_received %></td>
+          <td><%= honors_and_award.personal_detail %></td>
+          <td><%= link_to 'Show', honors_and_award %></td>
+          <td><%= link_to 'Edit', edit_honors_and_award_path(honors_and_award) %></td>
+          <td><%= link_to 'Destroy', honors_and_award, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  </fieldset>
+<%= link_to 'Back', honors_and_awards_path %>
+<%= link_to 'Next', staff_register11_path, class: "btn"%>
+</div>
+<%= render "layouts/footer"%>
+
+<style>
+.container-background{
+  height: 350px;
+}
+</style>

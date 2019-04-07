@@ -1,0 +1,16 @@
+<%= render "layouts/menubar"%>
+<div class="container">
+<h1>Editing Personal Detail</h1>
+
+<%= render 'form', personal_detail: @personal_detail %>
+
+<%= link_to 'Show', @personal_detail %> |
+<%= link_to 'Back', personal_details_path %>
+</div>
+<%= render "layouts/footer"%>
+
+<style>
+.container-background{
+  height: 350px;
+}
+</style>

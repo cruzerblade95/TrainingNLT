@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Relative name:</strong>
+  <%= @relative.relative_name %>
+</p>
+
+<p>
+  <strong>Relative nric:</strong>
+  <%= @relative.relative_nric %>
+</p>
+
+<p>
+  <strong>Relative relationship:</strong>
+  <%= @relative.relative_relationship %>
+</p>
+
+<p>
+  <strong>Relative tel no:</strong>
+  <%= @relative.relative_tel_no %>
+</p>
+
+<p>
+  <strong>Relative hp no:</strong>
+  <%= @relative.relative_hp_no %>
+</p>
+
+<p>
+  <strong>Relative perm address:</strong>
+  <%= @relative.relative_perm_address %>
+</p>
+
+<p>
+  <strong>Relative postcode:</strong>
+  <%= @relative.relative_postcode %>
+</p>
+
+<p>
+  <strong>Personal detail:</strong>
+  <%= @relative.personal_detail %>
+</p>
+
+<%= link_to 'Edit', edit_relative_path(@relative) %> |
+<%= link_to 'Back', relatives_path %>

@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Beneficiaries</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ben name</th>
+      <th>Ben nric</th>
+      <th>Ben relationship</th>
+      <th>Ben percentage</th>
+      <th>Ben tel no</th>
+      <th>Ben hp no</th>
+      <th>Ben perm address</th>
+      <th>Ben postcode</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @beneficiaries.each do |beneficiary| %>
+      <tr>
+        <td><%= beneficiary.ben_name %></td>
+        <td><%= beneficiary.ben_nric %></td>
+        <td><%= beneficiary.ben_relationship %></td>
+        <td><%= beneficiary.ben_percentage %></td>
+        <td><%= beneficiary.ben_tel_no %></td>
+        <td><%= beneficiary.ben_hp_no %></td>
+        <td><%= beneficiary.ben_perm_address %></td>
+        <td><%= beneficiary.ben_postcode %></td>
+        <td><%= link_to 'Show', beneficiary %></td>
+        <td><%= link_to 'Edit', edit_beneficiary_path(beneficiary) %></td>
+        <td><%= link_to 'Destroy', beneficiary, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Beneficiary', new_beneficiary_path %>

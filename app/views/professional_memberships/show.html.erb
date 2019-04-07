@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Association:</strong>
+  <%= @professional_membership.association %>
+</p>
+
+<p>
+  <strong>Institution:</strong>
+  <%= @professional_membership.institution %>
+</p>
+
+<p>
+  <strong>Duration date:</strong>
+  <%= @professional_membership.duration_date %>
+</p>
+
+<p>
+  <strong>Annual subs:</strong>
+  <%= @professional_membership.annual_subs %>
+</p>
+
+<p>
+  <strong>Personal detail:</strong>
+  <%= @professional_membership.personal_detail %>
+</p>
+
+<%= link_to 'Edit', edit_professional_membership_path(@professional_membership) %> |
+<%= link_to 'Back', professional_memberships_path %>

@@ -1,0 +1,59 @@
+<%= render "layouts/menubar"%>
+<div class="container">
+  <ul class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#">Personal Detail</a></li>
+    <li class="breadcrumb-item"><a href="#">Legal Spouse</a></li>
+    <li class="breadcrumb-item active">Children</li>
+  </ul>
+  <h2>Progress</h2>
+  <div class="progress">
+    <div class="progress-bar progress-bar-striped progress-bar-animated" style="width:60%">60%</div>
+  </div>
+
+<h1>New Child</h1>
+<fieldset>
+  <legend>Insert Children </legend>
+<%= render 'form', child: @child %>
+</fieldset>
+<br/>
+<br/>
+<fieldset>
+  <legend>Show Children </legend>
+  <h1>Children</h1>
+
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Children name</th>
+        <th>Children nric</th>
+        <th>Children age</th>
+        <th>Children sex</th>
+        <th>Personal detail</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @children.each do |child| %>
+        <tr>
+          <td><%= child.children_name %></td>
+          <td><%= child.children_nric %></td>
+          <td><%= child.children_age %></td>
+          <td><%= child.children_sex %></td>
+          <td><%= child.personal_detail %></td>
+          <td><%= link_to 'Destroy', child, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</fieldset>
+<%= link_to 'Back', children_path %>
+<%= link_to 'Next', staff_register4_path, class: "btn"%>
+</div>
+<%= render "layouts/footer"%>
+
+<style>
+.container-background{
+  height: 350px;
+}
+</style>

@@ -1,0 +1,62 @@
+<%= render "layouts/menubar"%>
+<div class="container">
+  <ul class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#">Personal Detail</a></li>
+    <li class="breadcrumb-item active">Legal Spouse</li>
+  </ul>
+  <h2>Progress</h2>
+  <div class="progress">
+    <div class="progress-bar progress-bar-striped progress-bar-animated" style="width:60%">60%</div>
+  </div>
+<h1>New Working Experience</h1>
+<fieldset>
+  <legend>Insert Working Experience </legend>
+<%= render 'form', working_experience: @working_experience %>
+</fieldset>
+<br/>
+<br/>
+<fieldset>
+  <legend>Show Working Experience </legend>
+<h1>Working Experiences</h1>
+
+<table border="1">
+  <thead>
+    <tr>
+      <th>Company name</th>
+      <th>Designation</th>
+      <th>Reason leaving</th>
+      <th>Year</th>
+      <th>Duration</th>
+      <th>Personal detail</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @working_experiences.each do |working_experience| %>
+      <tr>
+        <td><%= working_experience.company_name %></td>
+        <td><%= working_experience.designation %></td>
+        <td><%= working_experience.reason_leaving %></td>
+        <td><%= working_experience.year %></td>
+        <td><%= working_experience.duration %></td>
+        <td><%= working_experience.personal_detail %></td>
+        <td><%= link_to 'Show', working_experience %></td>
+        <td><%= link_to 'Edit', edit_working_experience_path(working_experience) %></td>
+        <td><%= link_to 'Destroy', working_experience, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</fieldset>
+<br>
+<%= link_to 'Back', working_experiences_path %>
+<%= link_to 'Next', staff_register9_path, class: "btn"%>
+</div>
+<%= render "layouts/footer"%>
+
+<style>
+.container-background{
+  height: 350px;
+}
+</style>

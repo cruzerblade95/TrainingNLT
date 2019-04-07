@@ -1,0 +1,24 @@
+<%= render "layouts/menubar"%>
+<div class="container">
+  <ul class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#">Personal Detail</a></li>
+    <li class="breadcrumb-item active">Legal Spouse</li>
+    <li class="breadcrumb-item"><a href="#">Children</a></li>
+  </ul>
+  <h2>Progress</h2>
+  <div class="progress">
+    <div class="progress-bar progress-bar-striped progress-bar-animated" style="width:30%">30%</div>
+  </div>
+
+<h1>New Legal Spouse</h1>
+<%= render 'form', legal_spouse: @legal_spouse %>
+
+<%= link_to 'Back', legal_spouses_path %>
+</div>
+<%= render "layouts/footer"%>
+
+<style>
+.container-background{
+  height: 350px;
+}
+</style>

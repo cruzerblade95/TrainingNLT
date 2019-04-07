@@ -1,0 +1,47 @@
+<%= form_with(model: qualification_detail, local: true) do |form| %>
+  <% if qualification_detail.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(qualification_detail.errors.count, "error") %> prohibited this qualification_detail from being saved:</h2>
+
+      <ul>
+      <% qualification_detail.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :qualification %>
+    <%= form.text_field :qualification %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sub_disc %>
+    <%= form.text_field :sub_disc %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sch_col_uni %>
+    <%= form.text_field :sch_col_uni %>
+  </div>
+
+  <div class="field">
+    <%= form.label :year %>
+    <%= form.date_select :year %>
+  </div>
+
+  <div class="field">
+    <%= form.label :duration %>
+    <%= form.text_field :duration %>
+  </div>
+
+  <div class="field">
+    <%= form.label :personal_detail_id %>
+    <%= form.text_field :personal_detail_id, value: "#{@current_user_register}" %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

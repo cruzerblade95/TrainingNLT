@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Qualification:</strong>
+  <%= @qualification_detail.qualification %>
+</p>
+
+<p>
+  <strong>Sub disc:</strong>
+  <%= @qualification_detail.sub_disc %>
+</p>
+
+<p>
+  <strong>Sch col uni:</strong>
+  <%= @qualification_detail.sch_col_uni %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @qualification_detail.year %>
+</p>
+
+<p>
+  <strong>Duration:</strong>
+  <%= @qualification_detail.duration %>
+</p>
+
+<p>
+  <strong>Personal detail:</strong>
+  <%= @qualification_detail.personal_detail %>
+</p>
+
+<%= link_to 'Edit', edit_qualification_detail_path(@qualification_detail) %> |
+<%= link_to 'Back', qualification_details_path %>

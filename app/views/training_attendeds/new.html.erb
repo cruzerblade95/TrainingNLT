@@ -1,0 +1,79 @@
+<%= render "layouts/menubar"%>
+<div class="container">
+  <ul class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#">Personal Detail</a></li>
+    <li class="breadcrumb-item"><a href="#">Legal Spouse</a></li>
+    <li class="breadcrumb-item"><a href="#">Children</a></li>
+    <li class="breadcrumb-item"><a href="#">Relative</a></li>
+    <li class="breadcrumb-item"><a href="#">Qualification</a></li>
+    <li class="breadcrumb-item"><a href="#">Experience</a></li>
+    <li class="breadcrumb-item"><a href="#">Honor and Award</a></li>
+    <li class="breadcrumb-item active">Training</li>
+  </ul>
+  <h2>Progress</h2>
+  <div class="progress">
+    <div class="progress-bar progress-bar-striped progress-bar-animated" style="width:90%">90%</div>
+  </div>
+
+<h1>Training</h1>
+<br/>
+<br/>
+<fieldset>
+  <legend>Insert Training</legend>
+<%= render 'form', training_attended: @training_attended %>
+</fieldset>
+<br/>
+<br/>
+<fieldset>
+  <legend>Show Training</legend>
+  <h1>Training Attended</h1>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Training</th>
+        <th>Status</th>
+        <th>Duration of Training(hours)</th>
+        <th>Training Institute</th>
+        <th>Training Place</th>
+        <th>Staff</th>
+        <th>Certificate</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+<tr>
+  <td>Ruby on rails training</td>
+  <td>Finished</td>
+  <td>20 hours</td>
+  <td>Bangsar South</td>
+  <td>Kerinchi</td>
+  <td>Nabil</td>
+  <td><a href="#">Download</a></td>
+</tr>
+    <tbody>
+      <% @training_attendeds.each do |training_attended| %>
+        <tr>
+          <td><%= training_attended.training %></td>
+          <td><%= training_attended.status %></td>
+          <td><%= training_attended.duration_training %></td>
+          <td><%= training_attended.training_institute %></td>
+          <td><%= training_attended.training_place %></td>
+          <td><%= training_attended.personal_detail %></td>
+          <td><%= link_to 'Show', training_attended %></td>
+          <td><%= link_to 'Edit', edit_training_attended_path(training_attended) %></td>
+          <td><%= link_to 'Destroy', training_attended, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  </fieldset>
+<%= link_to 'Back', training_attendeds_path %>
+<%= link_to 'Next', staff_register_finish_path, class: "btn"%>
+</div>
+<%= render "layouts/footer"%>
+
+<style>
+.container-background{
+  height: 350px;
+}
+</style>

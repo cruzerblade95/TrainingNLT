@@ -1,0 +1,56 @@
+<%= render "personal_details/form" %>
+<h2>This is staff management page</h2>
+
+<p id="notice"><%= notice %></p>
+
+<h1>Personal Details</h1>
+
+<table>
+<thead>
+  <tr>
+    <th>Staff name</th>
+    <th>Staff nric</th>
+    <th>Staff dob</th>
+    <th>Staff sex</th>
+    <th>Staff pob</th>
+    <th>Staff race</th>
+    <th>Staff religion</th>
+    <th>Staff marital status</th>
+    <th>Staff perm address</th>
+    <th>Staff postcode</th>
+    <th>Staff state</th>
+    <th>Staff tel no</th>
+    <th>Staff hp no</th>
+    <th>Staff corr address</th>
+    <th>Staff employ type</th>
+    <th colspan="3"></th>
+  </tr>
+</thead>
+
+<tbody>
+  <% @personal_details.each do |personal_detail| %>
+    <tr>
+      <td><%= personal_detail.staff_name %></td>
+      <td><%= personal_detail.staff_nric %></td>
+      <td><%= personal_detail.staff_dob %></td>
+      <td><%= personal_detail.staff_sex %></td>
+      <td><%= personal_detail.staff_pob %></td>
+      <td><%= personal_detail.staff_race %></td>
+      <td><%= personal_detail.staff_religion %></td>
+      <td><%= personal_detail.staff_marital_status %></td>
+      <td><%= personal_detail.staff_perm_address %></td>
+      <td><%= personal_detail.staff_postcode %></td>
+      <td><%= personal_detail.staff_state %></td>
+      <td><%= personal_detail.staff_tel_no %></td>
+      <td><%= personal_detail.staff_hp_no %></td>
+      <td><%= personal_detail.staff_corr_address %></td>
+      <td><%= personal_detail.staff_employ_type %></td>
+      <td><%= link_to 'Show', personal_detail %></td>
+      <td><%= link_to 'Edit', edit_personal_detail_path(personal_detail) %></td>
+      <td><%= link_to 'Destroy', personal_detail, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</tbody>
+</table>
+
+<br>

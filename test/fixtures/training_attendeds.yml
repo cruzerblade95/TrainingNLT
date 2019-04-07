@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  training: MyString
+  status: MyString
+  duration_training: 1
+  training_institute: MyString
+  training_place: MyString
+  personal_detail: one
+
+two:
+  training: MyString
+  status: MyString
+  duration_training: 1
+  training_institute: MyString
+  training_place: MyString
+  personal_detail: two

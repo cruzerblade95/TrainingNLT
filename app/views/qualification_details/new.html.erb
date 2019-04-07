@@ -1,0 +1,61 @@
+<%= render "layouts/menubar"%>
+<div class="container">
+  <ul class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#">Personal Detail</a></li>
+    <li class="breadcrumb-item active">Legal Spouse</li>
+  </ul>
+  <h2>Progress</h2>
+  <div class="progress">
+    <div class="progress-bar progress-bar-striped progress-bar-animated" style="width:60%">60%</div>
+  </div>
+<h1>New Qualification Detail</h1>
+<fieldset>
+  <legend>Insert Qualification </legend>
+<%= render 'form', qualification_detail: @qualification_detail %>
+</fieldset>
+<br/>
+<br/>
+<fieldset>
+  <legend>Show Qualification </legend>
+  <h1>Qualification Details</h1>
+
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Qualification</th>
+        <th>Sub disc</th>
+        <th>Sch col uni</th>
+        <th>Year</th>
+        <th>Duration</th>
+        <th>Personal detail</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @qualification_details.each do |qualification_detail| %>
+        <tr>
+          <td><%= qualification_detail.qualification %></td>
+          <td><%= qualification_detail.sub_disc %></td>
+          <td><%= qualification_detail.sch_col_uni %></td>
+          <td><%= qualification_detail.year %></td>
+          <td><%= qualification_detail.duration %></td>
+          <td><%= qualification_detail.personal_detail %></td>
+          <td><%= link_to 'Show', qualification_detail %></td>
+          <td><%= link_to 'Edit', edit_qualification_detail_path(qualification_detail) %></td>
+          <td><%= link_to 'Destroy', qualification_detail, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  </fieldset>
+<%= link_to 'Back', qualification_details_path %>
+<%= link_to 'Next', staff_register8_path, class: "btn"%>
+</div>
+<%= render "layouts/footer"%>
+
+<style>
+.container-background{
+  height: 350px;
+}
+</style>
